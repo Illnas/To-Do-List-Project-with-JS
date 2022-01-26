@@ -23,7 +23,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
  .item-container {

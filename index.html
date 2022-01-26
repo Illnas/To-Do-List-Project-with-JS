@@ -12,7 +12,7 @@
     <title>To Do List Project</title>
   </head>
   <body>
-    <main>
+    <main id="main">
       <h1>To Do Project</h1>
       <form action="">
         <input
@@ -20,7 +20,7 @@
           placeholder="Add a Project/Work/Assignment here..."
           id="inputVal"
         />
-        <button type="submit" id="submit">Add</button>
+        <button type="submit" id="submit" data-action="submit">Add</button>
       </form>
 
       <section id="section-container">
@@ -48,7 +48,7 @@
       </section>
 
       <footer>
-        <button id="clear">Clear List</button>
+        <button id="clear" data-action="clear">Clear List</button>
       </footer>
     </main>
 
