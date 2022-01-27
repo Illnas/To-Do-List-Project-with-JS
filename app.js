@@ -2,9 +2,8 @@ let sectionContainer = document.getElementById("section-container");
 let itemContainer = document.getElementsByClassName("item-container");
 let buttons = document.getElementsByClassName("buttons");
 let inputVal = document.getElementById("inputVal");
-let main = document.getElementById("main")
+let main = document.getElementById("main");
 
-//github testing
 
 
 function addingEelements(arr) {
