@@ -4,6 +4,7 @@ let buttons = document.getElementsByClassName("buttons");
 let inputVal = document.getElementById("inputVal");
 let main = document.getElementById("main")
 
+//github testing
 
 
 function addingEelements(arr) {
