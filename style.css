@@ -1,73 +1,270 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+
+
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Main Styles */
 main {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(230, 230, 230);
 }
 
+main h1 {
+  margin: 20px 0;
+  padding-right: 60px;
+}
+
+main form #inputVal {
+  width: 300px;
+  height: 30px;
+  padding: 10px;
+}
+
+main form #submit {
+  width: 70px;
+  height: 30px;
+  margin-left: 10px;
+  border: 2px solid rgba(211, 211, 211, 0);
+  border-radius: 5px;
+  color: #fff;
+  background-color: rgb(0, 0, 0);
+}
+
+main form #submit:active {
+  border: 2px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
+
+main form #submit:hover {
+  border: 2px solid rgb(0, 0, 0);
+  color: rgb(2, 2, 2);
+  background-color: #fff;
+}
+
+/* Section Styles */
 section {
-    width: 60vw;
-    height: 100%;
-    background-color: aqua;
-    margin: 40px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-y: scroll;
-    scrollbar-width: none;
+  width: 50vw;
+  height: 500px;
+  background-color: rgb(255, 255, 255);
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
 
- .item-container {
-    margin: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 600px;
-    border: 1px solid black;
+.item-container {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 600px;
+  border: 1px solid black;
 }
 
 .item-container p {
-    height: 20px;
-    margin: 10px;
+  font-family: 'Quintessential', cursive;
+  margin: 10px;
+  width: 400px;
+  word-wrap: break-word;
+  display: block;
+  font-size: 20px;
 }
 
 .item-container .buttons {
-    margin-right: 20px;
-    font-size: 0;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 0;
 }
 
 .item-container .buttons button {
-    margin-left: 5px;
-    border: 4px solid rgba(0, 0, 0, 0);
-    border-radius: 6px;
+  margin-left: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
 }
 
-.item-container .buttons:nth-child(2) button:nth-child(1) span {
-    background-color: green;
+span {
+  display: block;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.item-container .buttons:nth-child(2) button:nth-child(2) span {
-    background-color: red;
+/* Material Icon First Child, a.k.a Green Btn */
+.item-container .buttons button:nth-child(1) .material-icons {
+  background-color: rgb(198, 253, 198);
+  border: 1px solid black;
+  border-radius: 3px;
+  font-size: 28px;
+  line-height: 40px;
 }
 
-.material-icons {
-    width: 100%;
-    height: 100%;
-    color: white;
+.item-container .buttons button:nth-child(1) .material-icons:active {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+}
+
+.item-container .buttons button:nth-child(1) .material-icons:hover {
+  background-color: rgb(10, 179, 24);
+  color: #fff;
+}
+
+/* Material Icon Second Child, a.k.a Red Btn */
+.item-container .buttons button:nth-child(2) .material-icons {
+  background-color: rgb(255, 168, 168);
+  border: 1px solid black;
+  border-radius: 3px;
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.item-container .buttons button:nth-child(2) .material-icons:active {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+}
+
+.item-container .buttons button:nth-child(2) .material-icons:hover {
+  background-color: rgb(179, 10, 10);
+  color: #fff;
 }
 
 
+/* Footer Styles */
+footer {
+  margin: 20px 0;
+}
+
+footer #clear {
+  width: 200px;
+  height: 40px;
+  border: 2px solid rgba(211, 211, 211, 0);
+  border-radius: 5px;
+  color: #fff;
+  background-color: rgb(0, 0, 0);
+}
+
+footer #clear:hover {
+  border: 2px solid rgb(0, 0, 0);
+  color: rgb(2, 2, 2);
+  background-color: #fff;
+}
+
+footer #clear:active {
+  border: 2px solid rgb(0, 0, 0);
+  color: rgb(2, 2, 2);
+  background-color: #fff;
+}
+
+/* Styles that are toggled */
+.item-container .buttons button:nth-child(1) .clickedButton {
+  background-color: rgb(45, 248, 45);
+}
 
 .paras {
-    text-decoration: line-through;
+  text-decoration-line: line-through;
+  text-decoration-color: rgb(206, 255, 143);
+  text-decoration-style: double;
+  text-decoration-thickness: 2px;
+}
+
+/* Media Queries */
+
+@media (min-width: 320px) and (max-width: 480px) {
+  main h1 {
+    padding: 0;
+  }
+
+  main form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main form #submit {
+    margin-top: 10px;
+  }
+
+  #section-container {
+    margin-top: 20px;
+    width: 90vw;
+  }
+
+  #section-container .item-container {
+    width: 90%;
+  }
+
+  #section-container .item-container p {
+    width: 55%;
+  }
+
+  #section-container .item-container .buttons {
+    display: flex;
+    width: 100px;
+    margin: 5px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  main h1 {
+    padding: 0;
+  }
+
+  main form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main form #submit {
+    margin-top: 10px;
+  }
+
+  #section-container {
+    margin-top: 20px;
+    width: 90vw;
+  }
+
+  #section-container .item-container {
+    width: 90%;
+  }
+
+  #section-container .item-container p {
+    width: 70%;
+  }
+
+  #section-container .item-container .buttons {
+    display: flex;
+    width: 100px;
+    margin: 5px;
+  }
+}
+
+/* Media Query for when ipads switch screens to left */
+@media (min-width: 1080px) and (max-width: 1280px) {
+  #section-container {
+    margin-top: 20px;
+    width: 90vw;
+  }
+
+  #section-container .item-container {
+    width: 80%;
+  }
 }

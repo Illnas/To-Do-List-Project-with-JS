@@ -22,8 +22,8 @@ function addingEelements(arr) {
 
     const buttonFinished = document.createElement("button");
     const buttonRemoved = document.createElement("button");
-    buttonFinished.innerHTML = `<span class="material-icons" data-action="finished"> check </span>`;
-    buttonRemoved.innerHTML = `<span class="material-icons" data-action="remove"> close </span>`;
+    buttonFinished.innerHTML = `<span class="material-icons" data-action="finished">check</span>`;
+    buttonRemoved.innerHTML = `<span class="material-icons" data-action="remove">close</span>`;
 
     buttonContainer.appendChild(buttonFinished);
     buttonContainer.appendChild(buttonRemoved);
@@ -35,12 +35,15 @@ function addingEelements(arr) {
 main.onclick = (e) => {
   let actions = e.target.dataset.action;
   let sibling = e.target.parentNode.parentNode.previousElementSibling;
+  let target = e.target;
   if (actions === "remove") {
     e.target.parentNode.parentNode.parentNode.remove();
   }
 
   if (actions === "finished") {
     sibling.classList.toggle("paras");
+    target.classList.toggle("clickedButton");
+
   }
 
   if(actions === "clear") {
